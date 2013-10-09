@@ -1,9 +1,8 @@
-function getRandomArbitary(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
-
 window.onload = function () {
+
+    function getRandomArbitary(min, max) {
+        return Math.random() * (max - min) + min;
+    }
 
     b2AABB  = Box2D.Collision.b2AABB;
     b2World = Box2D.Dynamics.b2World;
@@ -16,7 +15,6 @@ window.onload = function () {
     b2CircleShape = Box2D.Collision.Shapes.b2CircleShape;
     b2MouseJointDef = Box2D.Dynamics.Joints.b2MouseJointDef;
     b2ContactListener = Box2D.Dynamics.b2ContactListener;
-
 
     var world;
     var audio;
@@ -88,7 +86,6 @@ window.onload = function () {
         listener.EndContact = function(contact) {
             if (contact.GetFixtureA() === bottom || contact.GetFixtureB() === bottom) {
                 playClick();
-            //    console.log("g");
             }
         };
         listener.PostSolve = function(contact, impulse) {
