@@ -49,7 +49,7 @@ window.onload = function () {
         };
         createGround(0, 0, 800, 10);
         createGround(0, 0, 10, 600);
-        var bottom = createGround(0, 100-10, 800, 10);
+        var bottom = createGround(0, 200-10, 800, 10);
         createGround(400-10, 0, 10, 600);
 
 
@@ -70,7 +70,7 @@ window.onload = function () {
             return ball;
         };
 
-        for (var i = 0; i < 200; ++i) {
+        for (var i = 0; i < 400; ++i) {
             var x = getRandomArbitary(10, 300);
             var y = getRandomArbitary(10, 50);
             var r = 3;
